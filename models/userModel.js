@@ -10,8 +10,16 @@ const userShema = new mongoose.Schema({
     },
     password: {
         type: String
-    }
+    },
+    cart: [{
+        product_ID: {
+            type: String
+        },
+        quantity: {
+            type: Number
+        }
+    }]
 });
 
 const userModel = mongoose.model('user', userShema, 'user');
-export default userModel;
+export { userModel };

@@ -21,6 +21,8 @@ app.listen(PORT, () => {
     console.log("Server Running");
 })
 
+//const mysqlConn = mysql.createConnection("mysql://root:dS0Zm9Ibor2HWkd3qXd8@containers-us-west-164.railway.app:5730/railway");
+
 const mysqlConn = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -36,7 +38,7 @@ mysqlConn.connect((err) => {
     console.log('Connected mysql');
 })
 
-//mysqlConn.query("INSERT INTO user (user_ID, username, password) VALUES ('001', 'bao', 'baonguyen2310')");
+//mysqlConn.query("INSERT INTO user (user_ID, username, password) VALUES ('003', 'bao', 'baonguyen2310')");
 mysqlConn.query("SELECT * FROM user WHERE user_ID='001'", (err, result, field) => {
     console.log(result);
 });
