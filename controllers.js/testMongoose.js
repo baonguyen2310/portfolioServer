@@ -37,10 +37,10 @@ const testMongoose = async (req, res) => {
             }
         ]
     });
-    await product1.save();
-    await product2.save();
-    await shop.save();
-    await user.save();
+    // await product1.save();
+    // await product2.save();
+    // await shop.save();
+    // await user.save();
     // const user = await userModel.find({ user_ID: '001' });
     // res.json(user);
 }
