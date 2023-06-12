@@ -7,6 +7,7 @@ import { Sequelize } from "sequelize";
 import mongoose from "mongoose";
 
 import { testMongoose } from "./controllers.js/testMongoose.js";
+import contactRouter from './routers/contact.js';
 
 dotenv.config();
 
@@ -52,3 +53,4 @@ mongoose.connect('mongodb://127.0.0.1:27017/facebook_clone')
     })
 
 app.get('/test-mongoose', testMongoose);
+app.use('/contact', contactRouter);
